@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "antfu.iconify",
+        "formulahendry.auto-rename-tag",
+        "vue.vscode-typescript-vue-plugin",
+        "vue.volar"
+    ]
+}

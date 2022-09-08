@@ -1,0 +1,40 @@
+{
+  "name": "vit-quasar",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 8080 --open",
+    "build": "vite build",
+    "serve": "vite preview",
+    "db": "json-server --watch ./json-server/db.json --routes ./json-server/routes.json --delay 1000",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .gitignore --fix",
+    "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.15.3",
+    "@vueuse/core": "^9.2.0",
+    "@vueuse/math": "^9.2.0",
+    "@vueuse/shared": "^9.2.0",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.22",
+    "quasar": "^2.7.7",
+    "tslib": "^2.4.0",
+    "vue": "^3.2.39",
+    "vue-global-api": "^0.4.1",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^1.1.1",
+    "@types/node": "^16.11.56",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.4.0",
+    "sass": "1.32.12",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vue-tsc": "^0.40.13"
+  }
+}
