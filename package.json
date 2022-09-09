@@ -1,11 +1,10 @@
 {
-  "name": "vit-quasar",
+  "name": "jedlik-vite-quasar-monomal",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080 --open",
     "build": "vite build",
     "serve": "vite preview",
-    "db": "json-server --watch ./json-server/db.json --routes ./json-server/routes.json --delay 1000",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .gitignore --fix",
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
   },

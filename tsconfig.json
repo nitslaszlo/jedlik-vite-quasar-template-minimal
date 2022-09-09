@@ -12,29 +12,13 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "node",
-      "vite/client"
-    ],
+    "lib": ["esnext", "dom"],
+    "types": ["node", "vite/client"],
     "paths": {
-      "src/*": [
-        "src/*"
-      ],
-      "/src/*": [
-        "src/*"
-      ],
-      "~/*": [
-        "src/*"
-      ]
+      "src/*": ["src/*"],
+      "/src/*": ["src/*"],
+      "~/*": ["src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.vue"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"]
 }

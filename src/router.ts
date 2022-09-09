@@ -15,32 +15,32 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/examples",
-    name: "Examples",
+    name: "examples",
     component: ExamplesView,
   },
   {
     path: "/account",
-    name: "Account",
+    name: "account",
     component: AccountView,
   },
   {
     path: "/qtable",
-    name: "q-table",
+    name: "qtable",
     component: QTableViewVue,
   },
   {
     path: "/grid",
-    name: "Grid",
+    name: "grid",
     component: GridView,
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     component: AboutView,
   },
   {
-    path: "/help",
-    name: "Quasar help",
+    path: "/qhelp",
+    name: "qhelp",
     component: HelpView,
   },
 ];

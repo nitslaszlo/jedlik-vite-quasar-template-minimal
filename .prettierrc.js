@@ -11,5 +11,5 @@ module.exports = {
   arrowParens: "always",
   vueIndentScriptAndStyle: true,
   bracketSameLine: false,
-  vueIndentScriptAndStyle: true
+  vueIndentScriptAndStyle: true,
 };
