@@ -9,7 +9,7 @@
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:e2e": "cypress open",
+    "test:e2e": "cypress open"
   },
   "dependencies": {
     "@quasar/extras": "^1.15.3",
