@@ -5,9 +5,8 @@
     <div class="column flex-center">
       <img alt="Jedlik logo" class="q-ma-md" src="./../assets/Jedlik_big.png" />
       <h2>Jedlik Ányos Technikum - Győr</h2>
-      <h2>aboutMsg</h2>
       <h2>
-        colorsOfTheme
+        Colors of theme
         <a href="https://quasar.dev/style/theme-builder" target="_blank">
           <q-chip>
             <q-avatar color="info" icon="bookmark" text-color="white" />

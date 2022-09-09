@@ -44,6 +44,14 @@
       name: "about",
       route: "/about",
       disabled: false,
+      separator: false,
+    },
+    {
+      icon: "mdi-lifebuoy",
+      text: "help",
+      name: "help",
+      route: "/help",
+      disabled: false,
       separator: true,
     },
   ]);
@@ -53,7 +61,7 @@
       icon: "mdi-github",
       text: "GitHub repo",
       name: "",
-      link: "https://github.com/nitslaszlo/jedlik-vite-quasar-template",
+      link: "https://github.com/nitslaszlo/jedlik-vite-quasar-template-minimal",
       disabled: false,
       separator: false,
     },

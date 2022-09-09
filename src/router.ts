@@ -5,6 +5,7 @@ import QTableViewVue from "./views/QTableView.vue";
 import ExamplesView from "./views/ExamplesView.vue";
 import GridView from "./views/GridView.vue";
 import StartPageView from "./views/StartPageView.vue";
+import HelpView from "./views/HelpView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +37,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/about",
     name: "About",
     component: AboutView,
+  },
+  {
+    path: "/help",
+    name: "Quasar help",
+    component: HelpView,
   },
 ];
 const router = createRouter({

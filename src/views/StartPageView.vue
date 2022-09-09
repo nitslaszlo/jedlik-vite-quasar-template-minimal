@@ -6,6 +6,7 @@
 
 <template>
   <div id="app">
+    <q-chip class="bg-red">Add to calendar</q-chip>
     <h3>Mouse: {{ x }} x {{ y }}</h3>
     <h3>
       Counter: {{ count }}

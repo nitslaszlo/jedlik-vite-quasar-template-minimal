@@ -6,6 +6,8 @@
         "antfu.iconify",
         "formulahendry.auto-rename-tag",
         "vue.vscode-typescript-vue-plugin",
-        "vue.volar"
+        "christian-kohler.npm-intellisense",
+        "codecoaching.quasar-docs",
+        "Vue.volar"
     ]
 }

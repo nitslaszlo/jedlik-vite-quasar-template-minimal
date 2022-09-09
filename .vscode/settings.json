@@ -39,5 +39,6 @@
     },
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "vscode-edge-devtools.webhint": false,
   }
