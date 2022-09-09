@@ -6,6 +6,7 @@ module.exports = {
     browser: true,
     es2021: true,
     "vue/setup-compiler-macros": true,
+    "cypress/globals": true,
   },
   parser: "vue-eslint-parser",
   parserOptions: {
@@ -31,8 +32,9 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:vue/vue3-recommended",
     "prettier",
+    "plugin:cypress/recommended",
   ],
-  plugins: ["prettier", "@typescript-eslint"],
+  plugins: ["prettier", "@typescript-eslint", "cypress"],
   globals: {
     defineProps: "readonly",
     defineEmits: "readonly",
@@ -45,6 +47,12 @@ module.exports = {
     // "sort-imports": ["error", { ignoreCase: true }],
     "vue/attributes-order": ["error", { alphabetical: true }],
     // "no-console": "error",
+    // "cypress/no-assigning-return-values": "error",
+    // "cypress/no-unnecessary-waiting": "error",
+    // "cypress/assertion-before-screenshot": "warn",
+    // "cypress/no-force": "warn",
+    // "cypress/no-async-tests": "error",
+    // "cypress/no-pause": "error"
   },
   ignorePatterns: ["coverage", "dist", "node_modules"],
 };

@@ -65,8 +65,12 @@ With [Quasar](https://quasar.dev/) you can build effortlessly build high-perform
 
 [Prettier](https://prettier.io/) an opinionated code formatter. Supports many languages, integrates with most editors.
 
-## Vitest (not included, install yourself)
+## Vitest for unit and components tests
 
 Since the official setup created by create-vue is based on Vite, we recommend using a unit testing framework that can leverage the same configuration and transform pipeline directly from Vite. ["Vitest"](https://vuejs.org/guide/scaling-up/testing.html#unit-testing) is a unit testing framework designed specifically for this purpose, created and maintained by Vue / Vite team members. It integrates with Vite-based projects with minimal effort, and is blazing fast.
 
+## Cypress
+
+Until now, end-to-end testing wasn’t easy. It was the part developers hated.
+Not anymore. ["Cypress"](https://www.cypress.io/) makes setting up, writing, running and debugging tests easy.
 

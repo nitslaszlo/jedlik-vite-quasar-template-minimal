@@ -6,7 +6,10 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .gitignore --fix",
-    "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
+    "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "cypress open",
   },
   "dependencies": {
     "@quasar/extras": "^1.15.3",
@@ -27,13 +30,18 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/test-utils": "^2.0.2",
+    "cypress": "^10.7.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.4.0",
+    "jsdom": "^20.0.0",
     "sass": "1.32.12",
     "typescript": "^4.8.3",
     "vite": "^3.1.0",
+    "vitest": "^0.23.1",
     "vue-tsc": "^0.40.13"
   }
 }
