@@ -1,11 +1,11 @@
 # `Vue 3.x + Quasar 2.x template with Vite`
 
-# For proper intellisense in template block
+# Enable Take Over Mode
 
-When created a new \*.vue file or rename one you must to restart Volar language server:<br>
-
-1. F1 -> Command palette<br>
-2. Volar: Restart Vue server<br>
+1. Disable built-in TypeScript extension:
+- Run Extensions: Show Built-in Extensions command
+- Find "TypeScript and JavaScript Language Features", right click and select: Disable (Workspace)
+2. Reload VSCode
 
 # Used technologies
 

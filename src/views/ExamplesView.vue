@@ -117,7 +117,7 @@
             hint="Up to 10 'x' characters are allowed!"
             label="Max 10 eX!"
             outlined
-            :rules="[(v:String) => v.length <= 10 || 'Error: max 10 X!']"
+            :rules="[(v:string) => v.length <= 10 || 'Error: max 10 X!']"
             type="text"
           />
           <q-banner class="bg-positive shadow-6 q-my-md" rounded>
