@@ -12,7 +12,7 @@
     inputNap: string;
   }
 
-  const r = reactive<IReactiveData>({
+  const state = reactive<IReactiveData>({
     felkialtojelDarab: 3,
     nev: "Jedlik Ányos",
     xek: "",
@@ -23,36 +23,36 @@
 
   setInterval(() => {
     let wrongCharPos = -1;
-    for (let i = 0; i < r.xek.length; i++) {
-      if (r.xek[i].toLowerCase() !== "x") {
+    for (let i = 0; i < state.xek.length; i++) {
+      if (state.xek[i].toLowerCase() !== "x") {
         wrongCharPos = i;
         break;
       }
     }
     if (wrongCharPos !== -1) {
-      if (r.xek.length <= 10) {
-        r.xek = r.xek.replace(r.xek[wrongCharPos], "X");
+      if (state.xek.length <= 10) {
+        state.xek = state.xek.replace(state.xek[wrongCharPos], "X");
       } else {
-        r.xek = r.xek.replace(r.xek[wrongCharPos], "");
+        state.xek = state.xek.replace(state.xek[wrongCharPos], "");
       }
     } else {
-      if (r.xek.length < 10) {
-        r.xek += "X";
-      } else if (r.xek.length > 10) {
-        r.xek = r.xek.slice(0, -1);
+      if (state.xek.length < 10) {
+        state.xek += "X";
+      } else if (state.xek.length > 10) {
+        state.xek = state.xek.slice(0, -1);
       }
     }
   }, 3000);
 
-  const iNap = computed(() => r.inputNap.toLowerCase());
+  const iNap = computed(() => state.inputNap.toLowerCase());
 
-  watchEffect(() => (r.felkialtojelek = "!".repeat(r.felkialtojelDarab)));
+  watchEffect(() => (state.felkialtojelek = "!".repeat(state.felkialtojelDarab)));
 
   function onClick(művelet: string) {
     if (művelet === "+") {
-      r.felkialtojelDarab++;
+      state.felkialtojelDarab++;
     } else if (művelet === "-") {
-      r.felkialtojelDarab--;
+      state.felkialtojelDarab--;
     }
   }
 
@@ -71,21 +71,21 @@
   }
 
   function joNapHozzadni(nap: string) {
-    return iNap.value !== "" && napEllenorzese() && !r.napok.includes(nap);
+    return iNap.value !== "" && napEllenorzese() && !state.napok.includes(nap);
   }
 
   function hozzadNap(): void {
-    r.napok.push(iNap.value);
-    r.inputNap = "";
+    state.napok.push(iNap.value);
+    state.inputNap = "";
   }
 
   function joNapTorolni(nap: string): boolean {
-    return r.napok.includes(nap);
+    return state.napok.includes(nap);
   }
 
   function torolNap(): void {
-    r.napok = r.napok.filter((i) => i !== iNap.value);
-    r.inputNap = "";
+    state.napok = state.napok.filter((i) => i !== iNap.value);
+    state.inputNap = "";
   }
 </script>
 
@@ -101,7 +101,7 @@
       <div class="row">
         <div class="col-xs-12 col-md-6 q-pa-md">
           <q-input
-            v-model="r.nev"
+            v-model="state.nev"
             counter
             hide-hint
             hint="Up to 20 characters are allowed!"
@@ -111,7 +111,7 @@
             type="text"
           />
           <q-input
-            v-model="r.xek"
+            v-model="state.xek"
             counter
             hide-hint
             hint="Up to 10 'x' characters are allowed!"
@@ -122,24 +122,24 @@
           />
           <q-banner class="bg-positive shadow-6 q-my-md" rounded>
             <q-icon name="mdi-import" size="30px" />
-            Hello {{ r.nev }} {{ r.xek }} {{ r.felkialtojelek }}
+            Hello {{ state.nev }} {{ state.xek }} {{ state.felkialtojelek }}
           </q-banner>
           <q-banner class="bg-secondary shadow-6" rounded>
             <q-icon name="mdi-alert-box-outline" size="30px" />
-            Number of exclamation marks: {{ r.felkialtojelDarab }}
+            Number of exclamation marks: {{ state.felkialtojelDarab }}
           </q-banner>
           <div class="row justify-center q-my-md">
             <q-btn
               class="q-mr-md"
               color="green-8"
-              :disable="r.felkialtojelDarab == 10"
+              :disable="state.felkialtojelDarab == 10"
               label="Plus"
               @click="onClick('+')"
             />
             <q-btn
               class="q-mr-md"
               color="red-8"
-              :disable="r.felkialtojelDarab == 1"
+              :disable="state.felkialtojelDarab == 1"
               label="Minus"
               @click="onClick('-')"
             />
@@ -149,11 +149,11 @@
         <div class="col-xs-12 col-md-6 q-pa-md">
           <q-banner class="bg-positive shadow-6 q-my-md" rounded>
             <ol class="pa-3">
-              <li v-for="nap in r.napok" :key="nap">{{ nap }}</li>
+              <li v-for="nap in state.napok" :key="nap">{{ nap }}</li>
             </ol>
           </q-banner>
           <q-input
-            v-model="r.inputNap"
+            v-model="state.inputNap"
             counter
             hide-hint
             :hint="napEllenorzese() ? '' : 'Enter a name for a day!'"

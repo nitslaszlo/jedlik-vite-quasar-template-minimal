@@ -8,6 +8,7 @@
     "vue.vscode-typescript-vue-plugin",
     "christian-kohler.npm-intellisense",
     "codecoaching.quasar-docs",
-    "Vue.volar",
+    "vue.volar",
+    "eg2.vscode-npm-script"
   ]
 }

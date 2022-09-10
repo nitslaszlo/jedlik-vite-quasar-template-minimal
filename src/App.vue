@@ -167,7 +167,7 @@
 
       <q-page-container id="container">
         <router-view v-slot="{ Component }">
-          <transition mode="out-in" name="slide-fade">
+          <transition name="fade">
             <component :is="Component" />
           </transition>
         </router-view>
@@ -177,18 +177,13 @@
 </template>
 
 <style lang="scss">
-  .slide-fade-enter {
-    transform: translateX(10px);
-    opacity: 0;
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
   }
 
-  .slide-fade-enter-active,
-  .slide-fade-leave-active {
-    transition: all 0.2s ease;
-  }
-
-  .slide-fade-leave-to {
-    transform: translateX(-10px);
+  .fade-enter-from,
+  .fade-leave-to {
     opacity: 0;
   }
 

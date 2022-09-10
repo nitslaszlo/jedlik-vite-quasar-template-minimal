@@ -43,7 +43,7 @@ Use Vue Composition API globally instead of import APIs from vue in every file. 
 
 ## Quasar
 
-With [Quasar](https://quasar.dev/) you can build effortlessly build high-performance & high-quality Vue.js 3 user interfaces in record time.
+With [Quasar](https://quasar.dev/) you can build effortlessly build high-performance & high-quality Vue.js 3 user interfaces in record time. ["Awesome Quasar"](https://github.com/quasarframework/quasar-awesome)
 
 ## Axios
 

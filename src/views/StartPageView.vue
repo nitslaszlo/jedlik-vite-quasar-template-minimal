@@ -1,38 +1,36 @@
 <script setup lang="ts">
-  import { useMouse, useCounter } from "@vueuse/core";
-  const { x, y } = useMouse();
-  const { count, inc, dec } = useCounter();
+  let counter1 = ref(123);
+  let state = reactive({
+    counter2: 0,
+  });
+
+  const titleClass = ref("titleRed");
+
+  function inc(): void {
+    counter1.value++;
+    state.counter2++;
+    if (state.counter2 % 2 == 0) {
+      titleClass.value = "titleRed";
+    } else {
+      titleClass.value = "titleBlue";
+    }
+  }
 </script>
 
 <template>
-  <div id="app">
-    <q-chip class="bg-red">Add to calendar</q-chip>
-    <h3>Mouse: {{ x }} x {{ y }}</h3>
-    <h3>
-      Counter: {{ count }}
-      <a style="margin-right: 10px" @click="inc()">+</a>
-      <a @click="dec()">-</a>
-    </h3>
-
-    <br />
-  </div>
+  <q-page>
+    <q-btn color="white" label="Increment" no-caps text-color="black" @click="inc()" />
+    <h1>{{ counter1 }}</h1>
+    <h1>{{ state.counter2 }}</h1>
+    <h1 :class="titleClass">Make me red</h1>
+  </q-page>
 </template>
 
-<style scoped>
-  h1,
-  h2,
-  h3,
-  p {
-    font-family: "Noto Serif", serif;
-    user-select: none;
+<style>
+  .titleRed {
+    color: red;
   }
-  #app {
-    text-align: center;
-    color: rgba(0, 0, 0, 0.4);
-  }
-  a {
-    color: #41b883;
-    text-decoration: none;
-    cursor: pointer;
+  .titleBlue {
+    color: blue;
   }
 </style>
