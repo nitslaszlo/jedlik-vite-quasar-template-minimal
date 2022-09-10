@@ -19,7 +19,7 @@
 
 <template>
   <q-page>
-    <q-btn color="white" label="Increment" no-caps text-color="black" @click="inc()" />
+    <q-btn color="red" label="Increment" no-caps text-color="black" @click="inc()" />
     <h1>{{ counter1 }}</h1>
     <h1>{{ state.counter2 }}</h1>
     <h1 :class="titleClass">Make me red</h1>

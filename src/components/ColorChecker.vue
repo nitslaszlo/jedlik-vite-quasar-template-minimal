@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const color = ref("lightblue");
+  const color = ref("yellow");
 </script>
 
 <template>

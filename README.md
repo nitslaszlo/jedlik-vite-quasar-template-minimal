@@ -1,6 +1,10 @@
 # `Vue 3.x + Quasar 2.x template with Vite`
 
-# Enable Take Over Mode
+# Take Over Mode
+To get Vue SFCs and TypeScript working together, Volar creates a separate TS language service instance patched with Vue-specific support, and uses it in Vue SFCs. At the same time, plain TS files are still handled by VSCode's built-in TS language service, which is why we need TypeScript Vue Plugin to support Vue SFC imports in TS files. This default setup works, but for each project we are running two TS language service instances: one from Volar, one from VSCode's built-in service. This is a bit inefficient and can lead to performance issues in large projects.
+
+Volar provides a feature called "Takeover Mode" to improve performance. In takeover mode, Volar provides support for both Vue and TS files using a single TS language service instance.
+## Enable Take Over Mode
 
 1. Disable built-in TypeScript extension:
 - Run Extensions: Show Built-in Extensions command
