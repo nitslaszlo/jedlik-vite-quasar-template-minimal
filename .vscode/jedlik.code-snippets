@@ -17,7 +17,8 @@
 			"  <q-page></q-page>",
 			"</template>",
 			"",
-			"<style lang=\"scss\" scoped></style>"
+			"<style lang=\"scss\" scoped></style>",
+			""
 		]
 	}
 	// Place your jedlik-frontend-starter workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
