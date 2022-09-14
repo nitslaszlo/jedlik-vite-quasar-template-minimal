@@ -1,5 +1,5 @@
 {
-  "name": "jedlik-vite-quasar-monomal",
+  "name": "jedlik-vite-quasar-minimal",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080 --open",
@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/test-utils": "^2.0.2",
-    "cypress": "^10.7.0",
+    "cypress": "^10.8.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
