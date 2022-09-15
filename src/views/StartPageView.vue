@@ -4,4 +4,4 @@
   <q-page></q-page>
 </template>
 
-<style></style>
+<style lang="scss" scoped></style>

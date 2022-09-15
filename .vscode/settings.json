@@ -25,7 +25,6 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "javascript.validate.enable": false,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": true,
@@ -46,5 +45,4 @@
   },
   "html.format.wrapLineLength": 0,
   "html.suggest.html5": true,
-  "vscode-edge-devtools.webhint": false
 }
