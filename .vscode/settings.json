@@ -45,4 +45,5 @@
   },
   "html.format.wrapLineLength": 0,
   "html.suggest.html5": true,
+  "testing.automaticallyOpenPeekView": "never"
 }

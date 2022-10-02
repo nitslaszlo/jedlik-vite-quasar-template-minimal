@@ -1,40 +1,173 @@
 {
-	"v-model": {
-        "prefix": "vModel",
-        "body": [
-            "v-model=\"${1:something}\""
-        ],
-        "description": "Expects: varies based on value of form inputs element or output of components"
-    },
-	"vue3 init": {
-		"prefix": "vue3",
-		"description": "Init vue3 with composition API + TS + script setup + Quasar",
-		"scope": "vue",
-		"body": [
-			"<script setup lang=\"ts\"></script>",
-			"",
-			"<template>",
-			"  <q-page></q-page>",
-			"</template>",
-			"",
-			"<style lang=\"scss\" scoped></style>",
-			""
-		]
-	}
-	// Place your jedlik-frontend-starter workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+  "Other - Mouse related": {
+    "prefix": ["qother", "qmouse"],
+    "body": ["${1|non-selectable,no-pointer-events,all-pointer-events,cursor-pointer,cursor-not-allowed,cursor-inherit,cursor-none|}"],
+    "description": "[non-selectable|no-pointer-events|all-pointer-events|cursor-pointer|cursor-not-allowed|cursor-inherit|cursor-none]"
+  },
+  "Other - Scroll related": {
+    "prefix": ["qother","qscroll"],
+    "body": ["${1|scroll,no-scroll,overflow-auto,overflow-hidden,overflow-hidden-y,hide-scrollbar|}"],
+    "description": "[scroll|no-scroll|overflow-auto|overflow-hidden|overflow-hidden-y|hide-scrollbar]"
+  },
+  "Other - Orientation related - rotate": {
+    "prefix": ["qother","qrotate"],
+    "body": ["rotate-${1|45,90,135,180,225,270,315|}"],
+    "description": "rotate-[45|90|135|180w225w270|315]"
+  },
+  "Other - Orientation related - flip": {
+    "prefix": ["qother","qflip"],
+    "body": ["flip-${1|horizontal,verical|}"],
+    "description": "flip-[horizontal|vertical]"
+  },
+  "Other - Border related": {
+    "prefix": ["qother","qborder"],
+    "body": ["${1|no-border,no-border-radius,no-box-shadow,no-outline,rounded-borders,border-radius-inherit|}"],
+    "description": "[no-border|no-border-radius|no-box-shadow|no-outline|rounded-borders|border-radius-inherit]"
+  },
+  "Positioning - Alignment horizontal": {
+    "prefix": ["qpositioning", "qfloat", "qon"],
+    "body": ["${1|float,on|}-${2|left,right|}"],
+    "description": "[float|on]-[left|right]"
+  },
+  "Positioning - Alignment vertical": {
+    "prefix": ["qpositioning", "qvertical"],
+    "body": ["vertical-${1|top,middle,bottom|}"],
+    "description": "vertical-[top|middle|bottom]"
+  },
+  "Positioning - fixed, absolute, fullscreen and relative-position": {
+    "prefix": ["qpositioning", "qfixed", "qabsolute", "qrelative", "qfullscreen"],
+    "body": ["${1|fixed,absolute,fullscreen,relative-position|}"],
+    "description": "[fixed|absolute|fullscreen|relative-position]"
+  },
+  "Positioning - fixed or absolute with directions": {
+    "prefix": ["qpositioning", "qfixed", "qabsolute"],
+    "body": [
+      "${1|fixed,absolute|}-${2|center,top,right,bottom,left,top-left,top-right,bottom-left,bottom-right,full|}"
+    ],
+    "description": "[fixed|absolute|-[center|top|right|bottom|left|top-left|top-right|bottom-left|bottom-right|full]"
+  },
+  "Visibility - CSS Standard classes": {
+    "prefix": ["qvisibilty"],
+    "body": [
+      "${1|disabled,hidden,invisible,transparent,dimmed,light-dimmed,ellipsis,ellipsis-2-lines,ellipsis-3-lines,z-top,z-max|}"
+    ],
+    "description": "[disabledh|idden|invisible|transparent|dimmed|light-dimmed|ellipsis|ellipsis-2-lines|ellipsis-3-lines|z-top|z-max"
+  },
+  "Visibility - Plattform related": {
+    "prefix": ["qvisibilty"],
+    "body": [
+      "${1|desktop-only,desktop-hide,mobile-only,mobile-hide,touch-only,touch-hide,plattform-ios-only,plattform-ios-hide,plattform-android-only,plattform-android-hide|}"
+    ],
+    "description": "[desktop-only|desktop-hide|mobile-only|mobile-hide|touch-only|touch-hide|plattform-ios-only|plattform-ios-hide| plattform-android-only|plattform-android-hide]"
+  },
+  "Visibility - Orientation related": {
+    "prefix": ["qvisibilty, qorientation"],
+    "body": ["${1|orientation-portrait,orientation-landscape|}"],
+    "description": "[orientation-portrait|orientation-landscape]"
+  },
+  "Visibility - Standard breakpoints, window width related": {
+    "prefix": ["qvisibilty", "qbreakpoints"],
+    "body": ["${1|xs,sm,md,lg,xl|}"],
+    "description": "[xs|sm|md|lg|xl] (xs>=0, sm>=600, md>=1024, lg>=1440, xl>=1920)"
+  },
+  "Visibility - gt, lt breakpoints, window width related": {
+    "prefix": ["qvisibilty", "qbreakpoints"],
+    "body": ["$1{|gt,lt|}-${2|xs,sm,md,lg,xl|}"],
+    "description": "[gt|lt]-[xs|sm|md|lg|xl] (xs>=0, sm>=600, md>=1024, lg>=1440, xl>=1920)"
+  },
+  "Shadows - Others": {
+    "prefix": ["qshadow"],
+    "body": ["${1|no-shadow,inset-shadow,inset-shadow-down,shadow-transition|}"],
+    "description": "[no-shadow|inset-shadow|inset-shadow-down|shadow-transition]"
+  },
+  "Shadows - Standard (1-24)": {
+    "prefix": ["qshadow"],
+    "body": ["shadow-${1|1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|}"],
+    "description": "shadow-[1|2|..|23|24]"
+  },
+  "Shadows - Standard up (1-24)": {
+    "prefix": ["qshadow"],
+    "body": ["shadow-up-${1|1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24|}"],
+    "description": "shadow-up-[1|2|..|23|24]"
+  },
+  "Colors - Text/background COLOR LIST": {
+    "prefix": ["qtext", "qcolor"],
+    "body": [
+      "${1|text,bg|}-${2|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,grey,blue-gray|}-${3|1,2,3,4,5,6,7,8,9,10,11,12,13,14|}"
+    ],
+    "description": "[text|bg]-[red|pink|..|blue-gray]-[1|2|..|13|14]]"
+  },
+  "Colors - Text/background BRAND colors": {
+    "prefix": ["qtext", "qcolor"],
+    "body": ["${1|text,bg|}-${2|pimary,secondary,accent,dark,positive,negative,info,warning|}"],
+    "description": "[text|bg]-[pimary|secondary|accent|dark|positive|negative|info|warning]"
+  },
+  "Typography - CSS helper classes": {
+    "prefix": ["qtext"],
+    "body": [
+      "text-${1|right,left,center,justify,bold,italic,no-wrap,strike,uppercase,lowercase,capitalize|}"
+    ],
+    "description": "text-[right|left|center|justify|bold|italic|no-wrap|strike|uppercase|lowercase|capitalize]"
+  },
+  "Typography - Font weights": {
+    "prefix": ["qtext"],
+    "body": ["text-weight-${1|thin,light,regular,medium,bold,bolder|}"],
+    "description": "text-weight-[thin|light|regular|medium|bold|bolder]"
+  },
+  "Typography - Heading classes": {
+    "prefix": ["qtext"],
+    "body": ["text-${1|h1,h2,h3,h4,h5,h6,subtitle1,subtitle2,body1,body2,caption,overline|}"],
+    "description": "text-[h1|h2|..|h5|h6|subtitle1|subtitle2|body1|body2|caption|overline]"
+  },
+  "Spacing classes - Margin/Padding": {
+    "prefix": ["qmargin", "qpadding"],
+    "body": ["q-${1|m,p|}${2|a,t,r,b,l,x,y|}-${3|xs,sm,md,lg,xl,none,auto|}"],
+    "description": "q-[m|p]-[a|t|r|b|l|x|y]-[xs|sm|md|lg|xl|none|auto] (auto - ONLY for: q-ml-*, q-mr-*, q-mx-*)"
+  },
+  "Spacing classes with BREAKPOINTS - Margin/Padding": {
+    "prefix": ["qmargin", "qpadding"],
+    "body": ["q-${1|m,p|}${2|a,t,r,b,l,x,y|}-${3|xs,sm,md,lg,xl|}-${4|xs,sm,md,lg,xl,none,auto|}"],
+    "description": "q-[m|p]-[a|t|r|b|l|x|y]-[xs|sm|md|lg|xl]-[xs|sm|md|lg|xl|none|auto] (auto - ONLY for: q-ml-*, q-mr-*, q-mx-*)"
+  },
+  "Spacing Classes - No margin/No padding": {
+    "prefix": ["qmargin", "qpadding"],
+    "body": ["no-${1|margin,padding|}"],
+    "description": "no-[margin|padding]"
+  },
+  "v-model": {
+    "prefix": "vModel",
+    "body": ["v-model=\"${1:something}\""],
+    "description": "Expects: varies based on value of form inputs element or output of components"
+  },
+  "vue3 init": {
+    "prefix": "vue3",
+    "description": "Init vue3 with composition API + TS + script setup + Quasar",
+    "scope": "vue",
+    "body": [
+      "<script setup lang=\"ts\"></script>",
+      "",
+      "<template>",
+      "  <q-page></q-page>",
+      "</template>",
+      "",
+      "<style lang=\"scss\" scoped></style>",
+      ""
+    ]
+  }
+  // Place your jedlik-frontend-starter workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
 }

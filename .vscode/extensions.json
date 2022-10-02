@@ -1,3 +1,4 @@
+
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
@@ -5,10 +6,10 @@
     "christian-kohler.path-intellisense",
     "antfu.iconify",
     "formulahendry.auto-rename-tag",
-    "vue.vscode-typescript-vue-plugin",
     "christian-kohler.npm-intellisense",
     "codecoaching.quasar-docs",
     "vue.volar",
-    "eg2.vscode-npm-script"
+    "eg2.vscode-npm-script",
+    "formulahendry.auto-close-tag"
   ]
 }
