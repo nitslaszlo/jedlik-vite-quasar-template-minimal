@@ -1,81 +1,143 @@
 {
+  "Grid - Column responsive classes": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|col,offset|}-${2|xs,sm,md,lg,xl|}-${3|1,2,3,4,5,6,7,8,9,10,11,12,auto|}"
+    ],
+    "description": "[col|offset]-[xs|sm|md|lg|xl]-[1|2|..|11|12|auto]"
+  },
+  "Grid - Column classes": {
+    "prefix": ["qgrid"],
+    "body": [
+      "col-${1|1,2,3,4,5,6,7,8,9,10,11,12,auto,grow,shrink|}"
+    ],
+    "description": "col-[1|2|..|11|12|auto|grow|shrink]"
+  },
+  "Grid - Self alignment": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|self-start,self-center,self-baseline,self-end,self-stretch|}"
+    ],
+    "description": "[self-start|self-center|self-baseline|self-end|self-stretch]"
+  },
+  "Grid - Align containers's lines": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|content-start,content-end,content-center,content-stretch,content-between,content-around|}"
+    ],
+    "description": "[content-start|content-end|content-center|content-stretch|content-between|content-around]"
+  },
+  "Grid - Alignment vertical": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|items-start,items-end,items-center,items-stretch,items-baseline|}"
+    ],
+    "description": "[items-start|items-end|items-center|items-stretch|items-baseline]"
+  },
+  "Grid - Alignment horizontal": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|justify-start,justify-end,justify-center,justify-between,justify-around,justify-evenly|}"
+    ],
+    "description": "[justify-start|justify-end|justify-center|justify-between|justify-around|justify-evenly]"
+  },
+  "Grid - Wrap": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|wrap,no-wrap,reverse-wrap|}"
+    ],
+    "description": "[wrap(default)|no-wrap|reverse-wrap]"
+  },
+  "Grid - Direction": {
+    "prefix": ["qgrid"],
+    "body": [
+      "${1|row,row inline,column,column inline,row reverse,column reverse|}"
+    ],
+    "description": "[row|row inline|column|column inline|row reverse|column reverse]"
+  },
   "Other - Mouse related": {
-    "prefix": ["qother", "qmouse"],
-    "body": ["${1|non-selectable,no-pointer-events,all-pointer-events,cursor-pointer,cursor-not-allowed,cursor-inherit,cursor-none|}"],
+    "prefix": ["qother"],
+    "body": [
+      "${1|non-selectable,no-pointer-events,all-pointer-events,cursor-pointer,cursor-not-allowed,cursor-inherit,cursor-none|}"
+    ],
     "description": "[non-selectable|no-pointer-events|all-pointer-events|cursor-pointer|cursor-not-allowed|cursor-inherit|cursor-none]"
   },
   "Other - Scroll related": {
-    "prefix": ["qother","qscroll"],
-    "body": ["${1|scroll,no-scroll,overflow-auto,overflow-hidden,overflow-hidden-y,hide-scrollbar|}"],
+    "prefix": ["qother"],
+    "body": [
+      "${1|scroll,no-scroll,overflow-auto,overflow-hidden,overflow-hidden-y,hide-scrollbar|}"
+    ],
     "description": "[scroll|no-scroll|overflow-auto|overflow-hidden|overflow-hidden-y|hide-scrollbar]"
   },
   "Other - Orientation related - rotate": {
-    "prefix": ["qother","qrotate"],
+    "prefix": ["qother"],
     "body": ["rotate-${1|45,90,135,180,225,270,315|}"],
     "description": "rotate-[45|90|135|180w225w270|315]"
   },
   "Other - Orientation related - flip": {
-    "prefix": ["qother","qflip"],
+    "prefix": ["qother"],
     "body": ["flip-${1|horizontal,verical|}"],
     "description": "flip-[horizontal|vertical]"
   },
   "Other - Border related": {
-    "prefix": ["qother","qborder"],
-    "body": ["${1|no-border,no-border-radius,no-box-shadow,no-outline,rounded-borders,border-radius-inherit|}"],
+    "prefix": ["qother"],
+    "body": [
+      "${1|no-border,no-border-radius,no-box-shadow,no-outline,rounded-borders,border-radius-inherit|}"
+    ],
     "description": "[no-border|no-border-radius|no-box-shadow|no-outline|rounded-borders|border-radius-inherit]"
   },
   "Positioning - Alignment horizontal": {
-    "prefix": ["qpositioning", "qfloat", "qon"],
+    "prefix": ["qpos"],
     "body": ["${1|float,on|}-${2|left,right|}"],
     "description": "[float|on]-[left|right]"
   },
   "Positioning - Alignment vertical": {
-    "prefix": ["qpositioning", "qvertical"],
+    "prefix": ["qpos"],
     "body": ["vertical-${1|top,middle,bottom|}"],
     "description": "vertical-[top|middle|bottom]"
   },
   "Positioning - fixed, absolute, fullscreen and relative-position": {
-    "prefix": ["qpositioning", "qfixed", "qabsolute", "qrelative", "qfullscreen"],
+    "prefix": ["qpos"],
     "body": ["${1|fixed,absolute,fullscreen,relative-position|}"],
     "description": "[fixed|absolute|fullscreen|relative-position]"
   },
   "Positioning - fixed or absolute with directions": {
-    "prefix": ["qpositioning", "qfixed", "qabsolute"],
+    "prefix": ["qpos"],
     "body": [
       "${1|fixed,absolute|}-${2|center,top,right,bottom,left,top-left,top-right,bottom-left,bottom-right,full|}"
     ],
     "description": "[fixed|absolute|-[center|top|right|bottom|left|top-left|top-right|bottom-left|bottom-right|full]"
   },
   "Visibility - CSS Standard classes": {
-    "prefix": ["qvisibilty"],
+    "prefix": ["qvis"],
     "body": [
       "${1|disabled,hidden,invisible,transparent,dimmed,light-dimmed,ellipsis,ellipsis-2-lines,ellipsis-3-lines,z-top,z-max|}"
     ],
     "description": "[disabledh|idden|invisible|transparent|dimmed|light-dimmed|ellipsis|ellipsis-2-lines|ellipsis-3-lines|z-top|z-max"
   },
   "Visibility - Plattform related": {
-    "prefix": ["qvisibilty"],
+    "prefix": ["qvis"],
     "body": [
       "${1|desktop-only,desktop-hide,mobile-only,mobile-hide,touch-only,touch-hide,plattform-ios-only,plattform-ios-hide,plattform-android-only,plattform-android-hide|}"
     ],
     "description": "[desktop-only|desktop-hide|mobile-only|mobile-hide|touch-only|touch-hide|plattform-ios-only|plattform-ios-hide| plattform-android-only|plattform-android-hide]"
   },
   "Visibility - Orientation related": {
-    "prefix": ["qvisibilty, qorientation"],
+    "prefix": ["qvis"],
     "body": ["${1|orientation-portrait,orientation-landscape|}"],
     "description": "[orientation-portrait|orientation-landscape]"
   },
   "Visibility - Standard breakpoints, window width related": {
-    "prefix": ["qvisibilty", "qbreakpoints"],
+    "prefix": ["qvis"],
     "body": ["${1|xs,sm,md,lg,xl|}"],
     "description": "[xs|sm|md|lg|xl] (xs>=0, sm>=600, md>=1024, lg>=1440, xl>=1920)"
   },
   "Visibility - gt, lt breakpoints, window width related": {
-    "prefix": ["qvisibilty", "qbreakpoints"],
+    "prefix": ["qvis"],
     "body": ["$1{|gt,lt|}-${2|xs,sm,md,lg,xl|}"],
     "description": "[gt|lt]-[xs|sm|md|lg|xl] (xs>=0, sm>=600, md>=1024, lg>=1440, xl>=1920)"
   },
-  "Shadows - Others": {
+  "Shadows - Other shadows": {
     "prefix": ["qshadow"],
     "body": ["${1|no-shadow,inset-shadow,inset-shadow-down,shadow-transition|}"],
     "description": "[no-shadow|inset-shadow|inset-shadow-down|shadow-transition]"
@@ -91,14 +153,14 @@
     "description": "shadow-up-[1|2|..|23|24]"
   },
   "Colors - Text/background COLOR LIST": {
-    "prefix": ["qtext", "qcolor"],
+    "prefix": ["qtext"],
     "body": [
       "${1|text,bg|}-${2|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,grey,blue-gray|}-${3|1,2,3,4,5,6,7,8,9,10,11,12,13,14|}"
     ],
     "description": "[text|bg]-[red|pink|..|blue-gray]-[1|2|..|13|14]]"
   },
   "Colors - Text/background BRAND colors": {
-    "prefix": ["qtext", "qcolor"],
+    "prefix": ["qtext"],
     "body": ["${1|text,bg|}-${2|pimary,secondary,accent,dark,positive,negative,info,warning|}"],
     "description": "[text|bg]-[pimary|secondary|accent|dark|positive|negative|info|warning]"
   },
@@ -120,17 +182,17 @@
     "description": "text-[h1|h2|..|h5|h6|subtitle1|subtitle2|body1|body2|caption|overline]"
   },
   "Spacing classes - Margin/Padding": {
-    "prefix": ["qmargin", "qpadding"],
+    "prefix": ["qspace"],
     "body": ["q-${1|m,p|}${2|a,t,r,b,l,x,y|}-${3|xs,sm,md,lg,xl,none,auto|}"],
     "description": "q-[m|p]-[a|t|r|b|l|x|y]-[xs|sm|md|lg|xl|none|auto] (auto - ONLY for: q-ml-*, q-mr-*, q-mx-*)"
   },
   "Spacing classes with BREAKPOINTS - Margin/Padding": {
-    "prefix": ["qmargin", "qpadding"],
+    "prefix": ["qspace"],
     "body": ["q-${1|m,p|}${2|a,t,r,b,l,x,y|}-${3|xs,sm,md,lg,xl|}-${4|xs,sm,md,lg,xl,none,auto|}"],
     "description": "q-[m|p]-[a|t|r|b|l|x|y]-[xs|sm|md|lg|xl]-[xs|sm|md|lg|xl|none|auto] (auto - ONLY for: q-ml-*, q-mr-*, q-mx-*)"
   },
   "Spacing Classes - No margin/No padding": {
-    "prefix": ["qmargin", "qpadding"],
+    "prefix": ["qspace"],
     "body": ["no-${1|margin,padding|}"],
     "description": "no-[margin|padding]"
   },
