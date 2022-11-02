@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { ref, computed } from "vue";
   const times = ref<number>(2);
   const props = defineProps<{ count: number }>();
   const result = computed(() => props.count * times.value);

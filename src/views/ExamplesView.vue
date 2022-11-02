@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { reactive, computed, watchEffect } from "vue";
   import ColorChecker from "../components/ColorChecker.vue";
   import Counter from "../components/Counter.vue";
   import HelloWorld from "../components/HelloWorld.vue";
