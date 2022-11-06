@@ -11,7 +11,7 @@
     "serve": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --ignore-path .gitignore --fix",
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}",
-    "test": "vitest",
+    "test": "vitest --run --coverage --reporter verbose",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "cypress open"
   },
@@ -28,11 +28,13 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@pinia/testing": "^0.0.14",
     "@quasar/vite-plugin": "^1.2.3",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vitest/coverage-istanbul": "^0.24.5",
     "@vue/test-utils": "^2.2.1",
     "cypress": "^10.11.0",
     "eslint": "^8.26.0",
@@ -40,7 +42,7 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.7.0",
-    "jsdom": "^20.0.2",
+    "happy-dom": "^7.6.6",
     "sass": "1.32.12",
     "typescript": "^4.8.4",
     "vite": "^3.2.2",

@@ -3,8 +3,10 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
-
+import dns from "dns";
 import vue from "@vitejs/plugin-vue";
+
+dns.setDefaultResultOrder("verbatim");
 
 export default defineConfig({
   plugins: [
@@ -23,9 +25,13 @@ export default defineConfig({
 
   // https://github.com/vitest-dev/vitest
   test: {
-    include: ["test/**/*.test.ts"],
+    include: ["test/**/*.test.ts", "src/**/*.test.ts"],
     globals: true,
-    environment: "jsdom",
+    environment: "happy-dom",
+    setupFiles: ["./test/setup.ts"],
+    coverage: {
+      provider: "istanbul", // or 'c8'
+    },
     deps: {
       inline: ["@vue", "@vueuse", "vue-demi"],
     },

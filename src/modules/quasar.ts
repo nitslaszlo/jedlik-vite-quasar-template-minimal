@@ -23,6 +23,7 @@ const config = {
   build: {
     devtool: "source-map",
   },
+  cssAddon: true,
 };
 
 export const install = (app: any) => {
